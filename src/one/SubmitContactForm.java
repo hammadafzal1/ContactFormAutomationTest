@@ -104,7 +104,7 @@ public class SubmitContactForm {
         
         
         //close Firefox
-        //driver.close();
+        driver.close();
        
     }
 	
