@@ -25,7 +25,7 @@ public class SubmitContactForm {
         
         //Find Contact Link (HTML Element) with the help of xPath and then perform click operation to open the contact page
         
-        driver.findElement(By.xpath("/html/body/div[1]/div/header/div/div[1]/div/div/nav/div/ul/li[3]/a/span")).click();
+        driver.findElement(By.xpath("(//span[contains(.,'Contact')])[1]")).click();
         
         
         // Step 3-  Copy all EVAM office addresses and paste them into the Message field of the form by pressing enter between each of them to make it easy to read.
@@ -37,12 +37,12 @@ public class SubmitContactForm {
         
         // 2) Find the Message Text Area Element and then send the USA address value to Message with the help of sendkeys() method 
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(AddressUSA);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(AddressUSA);
         
         
         // 3)  Finally to introduce a new line by replicating/impersonating the ENTER button I use Keys.ENTER in sendKeys() method 
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(Keys.ENTER);
         		
         
         // 1) Find out Span (HTML Element) with xpath and get Netherland office address with getText() method and finally store the text into a string variable called AddressNetherland 
@@ -52,45 +52,45 @@ public class SubmitContactForm {
         
         // 2) Find the Message Text Area Element and then send the Netherland address value to Message with the help of sendkeys() method 
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(AddressNetherland);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(AddressNetherland);
         
         
         // 3)  Finally to introduce a new line by replicating/impersonating the ENTER button I use Keys.ENTER in sendKeys() method 
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(Keys.ENTER);
        
         
-     // 1) Find out Span (HTML Element) with xpath and get Netherland office address with getText() method and finally store the text into a string variable called AddressNetherland
+     // 1) Find out Span (HTML Element) with xpath and get Turkey office address with getText() method and finally store the text into a string variable called AddressTurkey
         String   AddressTurkey = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[1]/div/div[3]/div/div/div[2]/p[2]/span")).getText();
         
-     // 2) Find the Message Text Area Element and then send the Netherland address value to Message with the help of sendkeys() method 
+     // 2) Find the Message Text Area Element and then send the Turkey address value to Message with the help of sendkeys() method 
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(AddressTurkey);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(AddressTurkey);
      
         // 3)  Finally to introduce a new line by replicating/impersonating the ENTER button I use Keys.ENTER in sendKeys() method  
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(Keys.ENTER);
         
         
-     // 1) Find out Span (HTML Element) with xpath and get Netherland office address with getText() method and finally store the text into a string variable called AddressNetherland
+     // 1) Find out Span (HTML Element) with xpath and get Russian office address with getText() method and finally store the text into a string variable called AddressRussia
         String   AddressRussia = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[2]/div/div[4]/p[2]/span")).getText();
         
-     // 2) Find the Message Text Area Element and then send the Netherland address value to Message with the help of sendkeys() method 
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(AddressRussia);
+     // 2) Find the Message Text Area Element and then send the Russian address value to Message with the help of sendkeys() method 
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(AddressRussia);
        
      // 3)  Finally to introduce a new line by replicating/impersonating the ENTER button I use Keys.ENTER in sendKeys() method 
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[3]/div/span/textarea")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//textarea[@name='textarea-274']")).sendKeys(Keys.ENTER);
         
      // Step 4 - Fill out Name, Email, Phone and Company Information
         
      // First of all find HTML Elements one by one for (Name, Email, Phone and Company) and then use sendKeys() method to send the values in the text fields    
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[1]/div[1]/span/input")).sendKeys("Test User1");
+        driver.findElement(By.xpath("//input[@name='text-925']")).sendKeys("Hammad Afzal");
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[1]/div[2]/span/input")).sendKeys("test1@yopmail.com");
+        driver.findElement(By.xpath("//input[@name='email-705']")).sendKeys("hammad.shiekhh@gmail.com");
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[2]/div[1]/span/input")).sendKeys("06987452");
+        driver.findElement(By.xpath("//input[@type='tel']")).sendKeys("066987452");
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[2]/div[2]/span/input")).sendKeys("Company");
+        driver.findElement(By.xpath("//input[contains(@name,'text-926')]")).sendKeys("Test Company");
         
         try {
 			Thread.sleep(5000);
@@ -100,7 +100,7 @@ public class SubmitContactForm {
         
       // Step 5 - Find Span (HTML Element) with xpath for send button and then use to click() to submit the form
         
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div/div/div[10]/div[1]/div/div[3]/div/div/form/div[2]/div[4]/div[2]/input")).click();
+        driver.findElement(By.xpath("(//input[contains(@type,'submit')])[2]")).click();
         
         
         //close Firefox
